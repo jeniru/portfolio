@@ -185,3 +185,68 @@ body {
   opacity: .7;
   font-size: .85rem;
 }
+
+@media (max-width: 338px) {
+  /* Hide brand (optional for space) */
+  .site-header .brand {
+    display: none;
+  }
+
+  /* Stack nav links vertically */
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* spacing between links */
+    padding: 10px 0;
+    margin: 0;
+    align-items: center; /* center links */
+    background: rgba(0,0,0,0.3); /* optional translucent background */
+    position: absolute; /* so it doesn't break layout */
+    top: var(--nav-height); /* below header */
+    left: 0;
+    width: 100%;
+    z-index: 50;
+  }
+
+  /* Nav links styling */
+  .nav-link {
+    font-size: 1rem; /* bigger for touch screens */
+    padding: 8px 0;
+    color: var(--text);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--accent);
+  }
+
+  /* Show hamburger button */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Hide nav-list by default, toggle via JS */
+  .nav-list.hidden {
+    display: none;
+  }
+
+  /* Optional: hero adjustments */
+  .hero {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-left {
+    display: none;
+  }
+
+  .hero-right {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
