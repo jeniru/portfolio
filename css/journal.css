@@ -116,3 +116,250 @@
     color: #81B3A3;   
     font-weight: 500; 
 }
+
+/* =========================
+   JOURNAL PAGE RESPONSIVE
+========================= */
+
+/* 320px - extra small phones */
+@media (max-width: 320px) {
+  .card-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card-container1,
+  .card-container2 {
+    flex: 1 1 100%;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .scanned-text {
+    font-size: 13px;
+  }
+
+  .journal-title-main {
+    font-size: 2rem;
+  }
+
+  .journal-sub {
+    font-size: 1rem;
+  }
+}
+
+/* 375px - small phones */
+@media (max-width: 375px) {
+  .card-row {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .card-container1,
+  .card-container2 {
+    flex: 1 1 100%;
+    padding: 18px;
+  }
+
+  .card-title {
+    font-size: 1.45rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  .scanned-text {
+    font-size: 14px;
+  }
+
+  .journal-title-main {
+    font-size: 2.2rem;
+  }
+
+  .journal-sub {
+    font-size: 1.05rem;
+  }
+}
+
+/* 425px - medium phones */
+@media (max-width: 425px) {
+  .card-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-container1,
+  .card-container2 {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .scanned-text {
+    font-size: 14px;
+  }
+
+  .journal-title-main {
+    font-size: 2.4rem;
+  }
+
+  .journal-sub {
+    font-size: 1.1rem;
+  }
+}
+
+/* 768px - tablets */
+@media (max-width: 768px) {
+  .card-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card-container1 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .card-container2 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .scanned-text {
+    font-size: 15px;
+  }
+
+  .journal-title-main {
+    font-size: 2.6rem;
+  }
+
+  .journal-sub {
+    font-size: 1.15rem;
+  }
+}
+
+/* 1024px - small desktop */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card-row {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .card-container1 {
+    flex: 0.45;
+    min-width: 300px;
+  }
+
+  .card-container2 {
+    flex: 0.55;
+    min-width: 400px;
+  }
+
+  .card-title {
+    font-size: 1.7rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .journal-title-main {
+    font-size: 2.8rem;
+  }
+
+  .journal-sub {
+    font-size: 1.2rem;
+  }
+}
+
+/* 1440px - large desktop */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .card-row {
+    gap: 30px;
+  }
+
+  .card-container1 {
+    flex: 0.4;
+    min-width: 350px;
+  }
+
+  .card-container2 {
+    flex: 0.6;
+    min-width: 500px;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
+  .card-text {
+    font-size: 1.05rem;
+  }
+
+  .journal-title-main {
+    font-size: 3rem;
+  }
+
+  .journal-sub {
+    font-size: 1.25rem;
+  }
+}
+
+/* 2560px - extra large screens */
+@media (min-width: 1441px) {
+  .card-row {
+    gap: 36px;
+  }
+
+  .card-container1 {
+    flex: 0.35;
+    min-width: 400px;
+  }
+
+  .card-container2 {
+    flex: 0.65;
+    min-width: 600px;
+  }
+
+  .card-title {
+    font-size: 2rem;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+  }
+
+  .journal-title-main {
+    font-size: 3.5rem;
+  }
+
+  .journal-sub {
+    font-size: 1.3rem;
+  }
+}
+
