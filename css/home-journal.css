@@ -312,3 +312,80 @@
     padding: 15px 10px;
   }
 }
+
+/* --------------------------
+   MOBILE NAVBAR (338px and 375px)
+--------------------------- */
+@media (max-width: 375px) {
+
+  /* Hide the brand circle & name for space */
+  .site-header .brand {
+    display: none;
+  }
+
+  /* Hamburger visible */
+  .hamburger {
+    display: block;
+  }
+
+  /* Stack nav links vertically */
+  .site-header .main-nav ul {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 0;
+    margin: 0;
+    align-items: center;
+    background: rgba(0,0,0,0.3); /* optional semi-transparent bg */
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    z-index: 50;
+  }
+
+  /* Hide nav-list initially, toggle with JS */
+  .nav-list.hidden {
+    display: none;
+  }
+
+  .site-header .main-nav li {
+    text-align: center;
+  }
+
+  .site-header .main-nav a {
+    font-size: 16px;
+    padding: 8px 0;
+    display: block;
+    color: var(--text);
+  }
+
+  .site-header .main-nav a:hover,
+  .site-header .main-nav a.active {
+    color: var(--accent);
+  }
+
+  /* Hero adjustments */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .hero-left {
+    display: none; /* hide left side text */
+  }
+
+  .hero-right {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  /* Footer adjustments */
+  .site-footer {
+    padding: 15px 10px;
+  }
+}
