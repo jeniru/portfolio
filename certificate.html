@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificates — Jenny Lou</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/certificates.css"/>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <div class="brand">
+        <div class="brand-circle">R</div>
+        <span class="brand-name">Jenny Lou</span>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#journal" class="nav-link">Journal</a></li>
+          <li><a href="certificate.html" class="nav-link active">Certificate</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="container certificate-page">
+
+    <h1 class="certificate-title">Certificates</h1>
+    <p class="certificate-subtitle">A collection of achievements, completed training, and earned awards.</p>
+
+    <!-- CAROUSEL WRAPPER -->
+    <div class="cert-carousel-wrapper">
+
+      <!-- Carousel Button (Left) -->
+      <button class="cert-arrow cert-left" id="certPrev">&#10094;</button>
+
+      <!-- Carousel Container -->
+      <div class="cert-carousel" id="certCarousel">
+
+        <!-- Certificate Card -->
+        <div class="cert-card">
+          <img src="/assets/certificates/cert1.png" alt="Certificate 1">
+          <h3>Educational Tour Certificate of Completion</h3>
+          <p>Completed an educational tour in Davao City on November 14, 2025, which included visits to multiple companies and organizations as part of an officially guided learning experience.</p>
+          <div class="cert-buttons">
+            <a href="/assets/certificates/cert1.png" target="_blank">View</a>
+            <a href="/assets/certificates/cert1.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="/assets/certificates/cert2.jpeg" alt="Certificate 2">
+          <h3>JavaScript Fundamentals Certificate</h3>
+          <p>Completed the BitDegree course “JavaScript Tutorial: Learn JavaScript Just in 1 Hour”, gaining foundational knowledge of JavaScript syntax, variables, functions, and core programming concepts.</p>
+          <div class="cert-buttons">
+            <a href="/assets/certificates/cert2.jpeg" target="_blank">View</a>
+            <a href="/assets/certificates/cert2.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="/assets/certificates/cert3.png" alt="Certificate 3">
+          <h3>PANAGSANGKA 2025 Recognition Award</h3>
+          <p>Honors active participation and commitment during the PANAGSANGKA 2025 event at Holy Cross of Davao College.</p>
+          <div class="cert-buttons">
+            <a href="/assets/certificates/cert3.png" target="_blank">View</a>
+            <a href="/assets/certificates/cert3.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <img src="/assets/certificates/cert4.png" alt="Certificate 3">
+          <h3>Information Management – Certificate of Completion</h3>
+          <p>Completed the Information Management course under CC105-2C with a perfect score of 1130/1130, demonstrating strong proficiency in database concepts, MySQL operations, and data handling fundamentals.</p>
+          <div class="cert-buttons">
+            <a href="/assets/certificates/cert4.png" target="_blank">View</a>
+            <a href="/assets/certificates/cert4.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <!-- Add more certificates by duplicating cards -->
+
+      </div>
+
+      <!-- Carousel Button (Right) -->
+      <button class="cert-arrow cert-right" id="certNext">&#10095;</button>
+
+    </div>
+  </main>
+
+   <!-- =========================
+               FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="footer-content container">
+
+      <h3 class="footer-name">JENNY LOU</h3>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/jenny.lou.ortega.2024" class="footer-icon"><img src="/assets/facebook.png" class="footer-icon-img"></a>
+        <a href="https://www.instagram.com/j3niru/" class="footer-icon"><img src="/assets/instagram (2).png" class="footer-icon-img"></a>
+        <a href="https://discord.gg/c5nk4PaD" class="footer-icon"><img src="/assets/discord.png" class="footer-icon-img"></a>
+      </div>
+
+      <p class="footer-credit">
+        © 2025 Developed and Designed by Jenny Lou
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- CAROUSEL SCRIPT -->
+  <script>
+    const carousel = document.getElementById("certCarousel");
+    const nextBtn = document.getElementById("certNext");
+    const prevBtn = document.getElementById("certPrev");
+
+    nextBtn.addEventListener("click", () => {
+      carousel.scrollBy({ left: 350, behavior: "smooth" });
+    });
+
+    prevBtn.addEventListener("click", () => {
+      carousel.scrollBy({ left: -350, behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>

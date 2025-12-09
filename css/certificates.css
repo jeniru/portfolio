@@ -1,0 +1,87 @@
+/* --------------------------
+   CERTIFICATES PAGE
+--------------------------- */
+
+.certificate-page {
+  padding: 120px 0;
+}
+
+.certificate-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.certificate-subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+/* Carousel Wrapper */
+.cert-carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.cert-carousel {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+}
+
+.cert-carousel::-webkit-scrollbar { display: none; }
+
+/* Certificate Card */
+.cert-card {
+  background: #3A524B;
+  min-width: 320px;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.07);
+  scroll-snap-align: start;
+  transition: .25s;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+}
+
+.cert-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cert-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.cert-buttons a {
+  padding: 8px 14px;
+  background: #20312B;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Arrows */
+.cert-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #20312B;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  margin-top: 10px; /* Adjust this margin to give it space from the cards */
+  margin: -80px;
+}
+
+
+.cert-left { left: -10px; }
+.cert-right { right: -10px; }

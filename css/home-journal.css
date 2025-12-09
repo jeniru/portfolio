@@ -1,0 +1,260 @@
+/* --------------------------
+   HERO SECTION (Home Page)
+--------------------------- */
+
+/* Prevent overlap with navbar */
+.hero {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: var(--gap);
+  align-items: center;
+  padding: 48px 0 96px;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  position: relative;
+  z-index: 10;
+  padding-right: 36px;
+  max-width: 640px;
+}
+
+.hero-title {
+  font-size: clamp(36px, 6vw, 64px);
+  margin: 0 0 18px 0;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* decorative arrow */
+.decor-arrow {
+  width: 120px;
+  margin-bottom: 14px;
+  opacity: .9;
+  transform: translateY(-6px);
+}
+
+/* subtitle and tag */
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 6px 0 32px 0;
+  line-height: 1.65;
+}
+
+.tag {
+  background: var(--accent);
+  padding: 3px 8px;
+  font-weight: 700;
+  color: var(--text);
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+/* scribble */
+.scribble {
+  display: block;
+  margin: 12px 0 22px 0;
+  opacity: .95;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.image-wrap {
+  position: relative;
+  width: 420px;
+  max-width: 60vw;
+  min-width: 260px;
+}
+
+.frame-back {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  right: -18px;
+  bottom: -18px;
+  border: 6px solid var(--text);
+  border-radius: 4px;
+  transform: translateY(8px);
+  box-shadow: 0 6px 0 rgba(0,0,0,0.05);
+  z-index: 1;
+}
+
+.frame-front {
+  position: relative;
+  z-index: 2;
+  border: 6px solid #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.frame-front img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 3/4;
+  transition: transform .6s cubic-bezier(.2,.9,.3,1);
+}
+
+.accent-square {
+  position: absolute;
+  right: -28px;
+  top: 38%;
+  width: 18px;
+  height: 18px;
+  background: var(--accent);
+  border: 3px solid var(--text);
+  transform: rotate(20deg);
+  z-index: 3;
+}
+
+/* SOCIAL ICONS */
+.social-vertical {
+  position: absolute;
+  right: -74px;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 5;
+}
+
+.sbtn {
+  width: 40px;
+  height: 40px;
+  background: #3A524B;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s;
+}
+
+.sbtn:hover {
+  transform: translateY(-4px);
+  background: #cfcfcf;
+}
+
+/* Reveal animations */
+.hero-left,
+.image-wrap,
+.social-vertical {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .6s, transform .6s;
+}
+
+.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* =========================
+        EXPLORE SECTION
+============================ */
+
+.explore-section {
+  margin-top: 140px;
+  text-align: center;
+}
+
+.explore-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: var(--text);
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+}
+
+/* ITEM BASE */
+.explore-item {
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.explore-item:hover {
+  transform: translateY(-10px);
+  filter: brightness(1.1);
+}
+
+/* GLASS CARD */
+.glass {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  position: relative;
+  z-index: 2;
+}
+
+.explore-icon {
+  font-size: 32px;
+  opacity: 0.9;
+}
+
+.explore-item h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.explore-item p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Shape Layer */
+.shape-layer {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 120px;
+  height: 120px;
+  background: var(--accent);
+  opacity: 0.25;
+  border-radius: 22px;
+  transform: rotate(18deg);
+  z-index: 1;
+}
+
+.explore-journal .shape-layer { background: #81B3A3; }
+.explore-cert .shape-layer { background: #A8C7B3; }
+.explore-gallery .shape-layer { background: #5D8A73; }
+
+@media (max-width: 700px) {
+  .explore-item {
+    height: 220px;
+  }
+  .shape-layer {
+    width: 90px;
+    height: 90px;
+  }
+}

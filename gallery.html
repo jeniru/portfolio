@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — Jenny Lou</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/gallery.css"/>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <div class="brand">
+        <div class="brand-circle">R</div>
+        <span class="brand-name">Jenny Lou</span>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#journal" class="nav-link">Journal</a></li>
+          <li><a href="certificate.html" class="nav-link">Certificate</a></li>
+          <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Gallery Section -->
+  <main class="container gallery-page">
+    <h1 class="gallery-title">Gallery</h1>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="/assets/gallery/img1.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img2.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img3.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img4.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img5.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img6.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img7.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img8.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img9.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img10.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img11.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img12.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img13.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img14.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img15.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img16.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img17.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img18.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img19.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img20.jpg" alt="Gallery Image">
+      </div>
+      <div class="gallery-item">
+        <img src="/assets/gallery/img21.jpg" alt="Gallery Image">
+      </div>
+    </div>
+
+  </main>
+
+   <!-- =========================
+               FOOTER
+  ========================== -->
+  <footer class="site-footer">
+    <div class="footer-content container">
+
+      <h3 class="footer-name">JENNY LOU</h3>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/jenny.lou.ortega.2024" class="footer-icon"><img src="/assets/facebook.png" class="footer-icon-img"></a>
+        <a href="https://www.instagram.com/j3niru/" class="footer-icon"><img src="/assets/instagram (2).png" class="footer-icon-img"></a>
+        <a href="https://discord.gg/c5nk4PaD" class="footer-icon"><img src="/assets/discord.png" class="footer-icon-img"></a>
+      </div>
+
+      <p class="footer-credit">
+        © 2025 Developed and Designed by Jenny Lou
+      </p>
+
+    </div>
+  </footer>
+
+        <!-- Fullscreen Image Viewer -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Expanded Image">
+        </div>
+    </div>
+
+    <!-- Lightbox JavaScript -->
+   <script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  // Open lightbox when clicking an image
+  document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add("show");
+    });
+  });
+
+  // Close lightbox when clicking ANYWHERE
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("show");
+  });
+
+  // Close on ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      lightbox.classList.remove("show");
+    }
+  });
+</script>
+
+
+</body>
+</html>

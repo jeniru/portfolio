@@ -1,0 +1,91 @@
+/* --------------------------
+   GALLERY PAGE
+--------------------------- */
+
+.gallery-page {
+  padding: 120px 0;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px; /* Add rounded corners to gallery items */
+}
+
+.gallery-item img {
+  width: 100%;
+  transition: .35s;
+  border-radius: 12px; /* Add rounded corners to images inside gallery items */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(.85);
+}
+
+/* ============================
+   LIGHTBOX (FIXED + CENTERED)
+============================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;                 /* full screen */
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;            /* THIS keeps it centered */
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  z-index: 9999;
+}
+
+.lightbox.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Content wrapper */
+.lightbox-content {
+  max-width: 45vw;
+  max-height: 30vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The enlarged image */
+.lightbox-content img {
+  max-width: 80%; /* Adjusted to fit better in lightbox */
+  max-height: 80%; /* Adjusted to fit better in lightbox */
+  border-radius: 12px; /* Add rounded corners to lightbox image */
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  animation: zoomIn .3s ease;
+}
+
+/* zoom animation */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

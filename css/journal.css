@@ -1,0 +1,118 @@
+/* Journal Hero Section */
+.journal-hero {
+    padding-top: 60px;   /* space above the section */
+    padding-bottom: 60px; /* space below the section */
+    text-align: center;   /* center text */
+}
+
+/* Main title inside journal hero */
+.journal-title-main {
+    font-size: 3rem;      /* adjust size */
+    margin-bottom: 20px;  /* space between title and subtitle */
+}
+
+/* Subtitle */
+.journal-sub {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #81B3A3;
+}
+
+
+/* -------------------
+   Flex container for cards
+------------------- */
+.card-row {
+    display: flex;
+    gap: 20px;             /* space between left/right card */
+    flex-wrap: wrap;        /* stack on small screens */
+    justify-content: center;
+    align-items: stretch;   /* ⭐ stretch children to same height */
+    margin-bottom: 40px;
+}
+
+/* -------------------
+   Image Card
+------------------- */
+.card-container1 {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid #81B3A3;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.10);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex: 0.4;          /* 40% width */
+    min-width: 280px;   /* mobile minimum */
+    max-width: 400px;   /* desktop max */
+    padding: 25px;
+}
+
+/* Image inside the card */
+.card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #81B3A3;
+    display: block;
+}
+
+/* -------------------
+   Text Card
+------------------- */
+.card-container2 {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(172, 157, 157, 0.1);
+    flex: 0.8;
+    min-width: 400px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* change this from center → flex-start */
+}
+
+.card-title {
+    margin-top: 15px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #81B3A3;
+
+}
+
+.card-text {
+    margin-top: -15px;
+    font-size: 1rem;
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.scanned-link-area {
+    display: flex;           /* arrange children in a row */
+    align-items: center;     /* vertically center the text with icon */
+    gap: 10px;               /* spacing between icon and text */
+    margin-top: 20px;        /* spacing from the previous content */
+}
+
+.scanned-icon {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 80px;   /* adjust size as needed */
+    height: 80px;
+    cursor: pointer;
+}
+
+.scanned-text {
+    font-size: 15px;   
+    color: #81B3A3;   
+    font-weight: 500; 
+}
