@@ -1,0 +1,81 @@
+/* =========================
+   RESUME PAGE
+========================= */
+
+.contact-resume {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 70vh;
+}
+
+/* LEFT SIDE */
+.resume-info h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.resume-info .contact-lead {
+  max-width: 420px;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+/* DOWNLOAD BUTTON */
+.resume-download {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  transition: all 0.25s ease;
+}
+
+.resume-download:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* RIGHT SIDE */
+.resume-preview {
+  text-align: center;
+}
+
+.resume-preview img {
+    margin-top: 20px;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-preview img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.28);
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-resume {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .resume-info .contact-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resume-preview img {
+    margin: 0 auto;  /* fix applied */
+    width: 100%;
+    max-width: 700px;
+  }
+}
