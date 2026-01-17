@@ -15,6 +15,7 @@
   font-size: 2.8rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 .resume-info .contact-lead {
@@ -23,6 +24,7 @@
   line-height: 1.6;
   opacity: 0.85;
   margin-bottom: 2rem;
+  color: #ffffff;
 }
 
 /* DOWNLOAD BUTTON */
@@ -36,6 +38,7 @@
   border-radius: 999px;
   border: 1px solid currentColor;
   transition: all 0.25s ease;
+  color: #ffffff;
 }
 
 .resume-download:hover {
@@ -49,7 +52,7 @@
 }
 
 .resume-preview img {
-    margin-top: 20px;
+  margin-top: 20px;
   width: 100%;
   max-width: 700px;
   border-radius: 18px;
@@ -61,6 +64,7 @@
   transform: translateY(-10px);
   box-shadow: 0 40px 80px rgba(0,0,0,0.28);
 }
+
 /* MOBILE */
 @media (max-width: 768px) {
   .contact-resume {
@@ -74,7 +78,7 @@
   }
 
   .resume-preview img {
-    margin: 0 auto;  /* fix applied */
+    margin: 0 auto;
     width: 100%;
     max-width: 700px;
   }
@@ -97,23 +101,49 @@
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: #000000;
+  color: #000;
 }
 
+.info-box p { 
+  max-width: 750px; 
+  line-height: 1.7; 
+  opacity: 0.9; 
+  margin-bottom: 1rem; 
+  color: #000; }
 /* CONTACT GRID */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
+/* CONTACT ITEM */
+.contact-item {
+  text-align: center;
+}
+
+/* FLATICON IMAGE */
+.contact-icon {
+  width: 38px;      /* 👈 ICON SIZE (EDIT HERE) */
+  height: 38px;
+  margin-bottom: 12px;
+}
+
+/* TITLE */
 .contact-grid h4 {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: 0.7;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
+  color: #000;
+}
+
+/* VALUE TEXT */
+.contact-grid p {
+  font-size: 0.95rem;
+  color: #000;
 }
 
 /* =========================
@@ -135,7 +165,7 @@
   margin-left: 120px;
 }
 
-/* MOBILE */
+/* MOBILE ABOUT */
 @media (max-width: 768px) {
   .about-box {
     grid-template-columns: 1fr;
